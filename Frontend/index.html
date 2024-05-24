@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager DApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.min.js"></script>
+</head>
+<body>
+    <h1>Gestión de Tareas ISC Descentralizado</h1>
+
+    <div class="container">
+        <h2>Tareas:</h2>
+
+        <div class="section">
+            <h2>Registro de Usuarios</h2>
+            <input type="text" id="userName" placeholder="Nombre">
+            <input type="text" id="userAddress" placeholder="Dirección del usuario">
+            <button onclick="registerUser()">Registro</button>
+            <p id="registerUserResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Crear Tarea</h2>
+            <input type="text" id="taskTitle" placeholder="Titulo">
+            <input type="text" id="taskDescription" placeholder="Descripcion">
+            <input type="number" id="taskDueDate" placeholder="Vencimiento (Dias)">
+            <input type="text" id="taskAssignedTo" placeholder="Asignado a:">
+            <button onclick="createTask()">Crear Tarea</button>
+            <p id="createTaskResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Marcar tarea como completada</h2>
+            <input type="number" id="taskIndex" placeholder="Índice de la tarea" min="0">
+            <button onclick="markTaskCompleted()">Marcar como completada</button>
+            <p id="markTaskCompletedResult"></p>
+        </div>
+        
+
+    </div>
+
+    <div class="container">
+        <h2>Consultas: </h2>
+        <div class="section">
+            <h2>Tareas</h2>
+            <button onclick="getTasks()">Tareas</button>
+            <ul id="tasksList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Usuarios</h2>
+            <button onclick="getUsers()">Usuarios</button>
+            <ul id="usersList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Verificar Autorización de Usuario</h2>
+            <input type="text" id="userAddressC" placeholder="Dirección del Usuario">
+            <button onclick="checkUserAuthorization()">Verificar</button>
+            <p id="checkUserResult"></p>
+        </div>
+
+    </div>
+
+    <div class="container" id="mi-seccion">
+        <h2>Admin: </h2>
+
+        <div class="section">
+            <h2>Autorizar Usuario</h2>
+            <input type="text" id="authorizeUserAddress" placeholder="Dirección del usuario">
+            <button onclick="authorizeUser()">Autorizar Usuario</button>
+            <p id="authorizeUserResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Desautorizar Usuario</h2>
+            <input type="text" id="deauthorizeUserAddress" placeholder="Direccion de usuario">
+            <button onclick="deauthorizeUser()">Desautorizar</button>
+            <p id="deauthorizeUserResult"></p>
+        </div>
+        <div class="section">
+            <h2>Eliminar Usuario</h2>
+            <input type="text" id="userAddressD" placeholder="Dirección del Usuario">
+            <button onclick="deleteUser()">Eliminar</button>
+            <p id="deleteUserResult"></p>
+        </div>
+
+    </div>
+
+    <center>
+        <button onclick="habilitarSeccionConContrasena('mi-seccion')">Habilitar Sección</button>
+        <button onclick="deshabilitarSeccion('mi-seccion')">Deshabilitar Sección</button>
+        <button type="button" onclick="limpiarCampos()">Limpiar</button>
+    </center>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

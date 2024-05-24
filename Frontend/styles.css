@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-top: 0;
+    text-align: center;
+    padding: 10px 50px;
+
+}
+
+.section input {
+    width: 100%;
+    padding: 10px 1px;
+    margin: 5px 0;
+}
+
+.section button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block; /* Añade esta línea */
+    margin: 10px 100px; /* Añade esta línea */
+
+}
+
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: gray;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block; /* Añade esta línea */
+    margin: 20px 10px;
+}
+
+.section button:hover {
+    background-color: #0056b3;
+}
+
+.section p {
+    color: green;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0; /* Agrega un espacio alrededor del párrafo */
+    overflow-wrap: break-word; /* Evita que el texto se desborde de la sección */
+}
+
+.section p {
+    /* Estilos del párrafo */
+    margin: 10px 0; /* Agrega un espacio alrededor del párrafo */
+    overflow-wrap: break-word; /* Evita que el texto se desborde de la sección */
+}
